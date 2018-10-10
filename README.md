@@ -1,3 +1,8 @@
+# ORIYAO
+docker pull docker.io/tiangolo/uwsgi-nginx-flask:python3.7
+docker build -t myimage .
+docker run -d --name mycontainer2 -p 6982:80 -v /home/Flask/app:/app --privileged=true -e FLASK_APP=main.py -e FLASK_DEBUG=1 myimage flask run --host=0.0.0.0 --port=80
+
 ## Supported tags and respective `Dockerfile` links
 
 * [`python3.7` _(Dockerfile)_](https://github.com/tiangolo/uwsgi-nginx-flask-docker/blob/master/python3.7/Dockerfile)
